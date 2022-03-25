@@ -45,3 +45,13 @@ TARGET_RECOVERY_UI_LIB := \
 
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_walleye_defconfig
+
+# Board uses A/B OTA.
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vbmeta \
+    dtbo \
+    vendor
