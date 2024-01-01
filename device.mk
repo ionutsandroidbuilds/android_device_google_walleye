@@ -118,3 +118,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # CHRE
 $(call soong_config_set,chre,chre_daemon_dsp_library,//vendor/google/walleye:libsdsprpc)
+
+# Fstab Hardware
+PRODUCT_COPY_FILES += \
+    device/google/walleye/fstab.hardware:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.$(PRODUCT_HARDWARE) \
+    device/google/walleye/fstab.hardware:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.$(PRODUCT_HARDWARE)
